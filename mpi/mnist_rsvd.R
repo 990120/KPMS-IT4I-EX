@@ -1,3 +1,7 @@
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("rhdf5")
+
 source("mnist_read_mpi.R") # reads blocks of rows
 suppressMessages(library(pbdDMAT))
 suppressMessages(library(pbdML))
